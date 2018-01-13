@@ -1,5 +1,5 @@
 /** Url for work with books */
-const apiUrl = 'http://192.168.0.101:5000/books';
+const apiUrl = 'https://djamaco-restful-api.herokuapp.com/books';
 
 /**
  *  Save book on server
