@@ -1,0 +1,111 @@
+<html>
+<head>
+    <style>
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="bootstrap.html">Same file with styles</a>
+        <!-- CREATE BOOK -->
+        <section>
+            <h2>Create book</h2>
+            <form id="createForm">
+                <div>
+                    <label for="title">Title</label>
+                    <input id="title" type="text" name="title">
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input id="author" type="text" name="author">
+                </div>
+                <div>
+                    <label for="pagesCount">Number of pages</label>
+                    <input id="pagesCount" type="number" name="pagesCount">
+                </div>
+                <div>
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="5" name="description"></textarea>
+                </div>
+                <div>
+                    <button onclick="saveBook(event)">Create</button>
+                </div>
+            </form>
+        </section>
+        <hr />
+
+        <!-- GET ALL BOOKS -->
+        <section>
+            <h2>Get all books</h2>
+            <div>
+                <button onclick="getBooks()">Get all books</button>
+            </div>
+            <div>
+                <pre id="displayBooks"></pre>
+            </div>
+        </section>
+        <hr />
+
+        <!-- GET BOOK -->
+        <section>
+            <h2>Get one book by id</h2>
+            <div>
+                <label for="getId">Id</label>
+                <input id="getId" type="number" name="id">
+                <button onclick="getBookById()">Get book</button>
+            </div>
+            <div>
+                <pre id="displayBook"></pre>
+            </div>
+        </section>
+        <hr />
+
+        <!-- EDIT BOOK -->
+        <section>
+            <h2>Edit book</h2>
+            <div>
+                <label for="getForEditId">Id</label>
+                <input id="getForEditId" type="number" name="id">
+                <button onclick="getBookForEdit()">Get book for edit</button>
+            </div>
+            <form id="editForm">
+                <input type="hidden" id="idEdit" name="id">
+                <div>
+                    <label for="titleEdit">Title</label>
+                    <input id="titleEdit" type="text" name="title">
+                </div>
+                <div>
+                    <label for="authorEdit">Author</label>
+                    <input id="authorEdit" type="text" name="author">
+                </div>
+                <div>
+                    <label for="pagesCountEdit">Number of pages</label>
+                    <input id="pagesCountEdit" type="number" name="pagesCount">
+                </div>
+                <div>
+                    <label for="descriptionEdit">Description</label>
+                    <textarea id="descriptionEdit" rows="5" name="description"></textarea>
+                </div>
+                <div>
+                    <button onclick="editBook(event)">Save</button>
+                </div>
+            </form>
+        </section>
+        <hr />
+
+        <!-- DELETE BOOK -->
+        <section>
+            <h2>Delete book by id</h2>
+            <div>
+                <label for="deleteId">Id</label>
+                <input id="deleteId" type="number" name="id">
+                <button onclick="deleteBookById()">Delete</button>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
